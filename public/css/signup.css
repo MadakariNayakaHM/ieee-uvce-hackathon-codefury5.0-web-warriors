@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('/images/9.jpeg');
+    background-image: url('/images/3.jpg');
     background-size: 200%;
     background-image:linear-gradient(to right black,grey,black);
     background-repeat: no-repeat;
@@ -70,6 +70,7 @@ body{
   }
   
   .content{
+    margin-top: 12px;
     display: inline-flex;
     overflow: hidden;
   }
@@ -211,3 +212,4 @@ footer{
 .nav-item{
   font-size: 12px;
 }
+

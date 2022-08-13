@@ -44,7 +44,8 @@ html{
 }
 
 body{
-    background-color: var(--black);
+    background-image: url('/images/3.jpg');
+    background-size: cover;
 }
 
 section{

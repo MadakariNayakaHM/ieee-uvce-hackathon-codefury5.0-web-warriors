@@ -47,3 +47,11 @@ exports.createQuery=async(req,res,next)=>
 {
   res.status(200).render('query');
 }
+exports.basePug=async (req,res,next)=>
+{
+  res.status(200).render('base');
+}
+exports.chat=async (req,res,next)=>
+{
+  res.status(200).render('chat');
+}

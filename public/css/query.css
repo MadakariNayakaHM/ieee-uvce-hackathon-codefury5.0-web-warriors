@@ -8,6 +8,11 @@
     --light-bg:#4b4b4b;
 }
 
+body{
+    background-image: url('/images/3.jpg');
+    background-size: cover;
+}
+
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;padding: 0;

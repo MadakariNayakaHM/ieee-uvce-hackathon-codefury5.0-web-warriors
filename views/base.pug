@@ -1,0 +1,68 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/style.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  title Startup
+header.header
+  section.flex
+    a.logo(href='#') Web Warriors
+    nav.navbar
+      a(href='/') Home
+      a(href='/create') Create
+      a(href='/display') View Startups
+      a(href='/viewSelected') Selected Start-ups
+      a(href='/createQuery') Create-Query 
+      a(href='/viewDash') Dashboard
+      a(href='/login') Sign-in
+      a(href='/signup') Sign-up
+    #menu-btn.fas.fa-bars
+section#home.home
+  .row
+    .content
+      h3
+        | IT&apos;S NOT ABOUT IDEAS.
+        br
+        | IT&apos;S ABOUT MAKING IDEAS HAPPEN.
+        br
+        span
+      a.btn(href='/login') Login/Sign-up...
+    .video-container
+      video#video-slider(src='/images/vid1.mp4' loop='' autoplay='' muted='')
+input#click(type='checkbox')
+label(for='click')
+  a(href='/chat')
+    i.fab.fa-facebook-messenger
+  i.fas.fa-times
+section#about.about
+  .row
+    .image
+      img(src='/images/2.svg' alt='')
+    .content
+      h3 why choose us?
+      p
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste mollitia ratione quas commodi, veniam laudantium, minus laboriosam, ducimus illo obcaecati suscipit officia accusantium doloribus dolorum ullam veritatis quis ea minima! Aut id necessitatibus deserunt quos vel! Repellat hic possimus magni dolore rerum et sed aspernatur maiores ipsum reprehenderit in minus ea natus nisi laboriosam commodi optio perspiciatis repellendus assumenda cumque, unde eius eum recusandae! Nam distinctio illum enim commodi dolorem. Veritatis, in numquam dicta ea voluptate maxime recusandae magnam odio illum delectus libero cupiditate ullam adipisci necessitatibus aliquid inventore aut sapiente voluptatem nam. Asperiores distinctio libero assumenda repudiandae explicabo!
+      a.btn(href='#contact') contact us
+section.footer
+  .box-container
+    .box
+      h3 quick links
+      a(href='#') Home
+      a(href='/create.html') Create
+      a(href='/display.html') View Satrtups
+      a(href='/noti.html') View Nofifications
+      a(href='/dash.html') Dashboard
+      a(href='/login1.html') Login
+      a(href='/signup.html') Sign-up
+    .box
+      h3 follow us
+      a(href='#') facebook
+      a(href='#') instagram
+      a(href='www.linkedin.com/in/vignesh-a-m-57b021222') linkdin
+  h1.credit
+    | created by 
+    span(style='color: green;') Web Warriors
+    | @all rights reserved
+script(src='/script.js')

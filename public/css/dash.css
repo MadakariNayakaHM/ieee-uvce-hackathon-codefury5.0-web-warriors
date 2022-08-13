@@ -11,6 +11,8 @@ body {
   background-color: #e6e8ed;
   color: #666666;
   font-family: "Montserrat", sans-serif;
+  background-image: url('/images/3.jpg');
+  background-size: cover;
 }
 
 .material-icons-outlined {

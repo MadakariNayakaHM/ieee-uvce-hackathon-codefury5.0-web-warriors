@@ -1,0 +1,30 @@
+head
+  meta(charset='utf-8')
+  title web-warriors
+  link(rel='stylesheet' href='/css/chat.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+input#click(type='checkbox')
+label(for='click')
+  i.fab.fa-facebook-messenger
+  i.fas.fa-times
+.wrapper
+  .head-text
+    | Let&apos;s chat? - Online
+  .chat-box
+    .desc-text
+      | Please select below categories to resolve your queries.
+    form(action='#')
+      .field
+        // <label for="funding query" style="font-size: 2rem; color: aqua;"></label>
+        select#cars(name='cars' style='height: 2.8rem; width: 20.5rem;font-size: 1rem;')
+          option(value='1') Small business Startup
+          option(value='2') Scalable Startup
+          option(value='3') Food-Startup
+          option(value='4') Buyable Startup
+          option(value='4') Large Company Startup
+          option(value='4') Social Startup
+          option(value='4') Offshoot Startup
+        button(type='submit' style='margin-top:1rem;') Start Chat
+.answer
+  h3 fjgyugug
