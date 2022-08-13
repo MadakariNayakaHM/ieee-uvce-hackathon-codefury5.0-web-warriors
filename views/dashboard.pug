@@ -1,0 +1,90 @@
+
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width,initial-scale=1.0')
+  title Admin Dashboard
+  // Montserrat Font
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  // Material Icons
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet')
+  // Custom CSS
+  link(rel='stylesheet' href='/css/dash.css')
+.grid-container
+  // Header
+  header.header
+    .menu-icon(onclick='openSidebar()')
+      span.material-icons-outlined menu
+    .header-left
+      span.material-icons-outlined search
+    .header-right
+      span.material-icons-outlined notifications
+      span.material-icons-outlined email
+      span.material-icons-outlined account_circle
+  // End Header
+  // Sidebar
+  aside#sidebar
+    .sidebar-title
+      .sidebar-brand
+        span.material-icons-outlined inventory
+        |  Web Warrior&apos;s
+      span.material-icons-outlined(onclick='closeSidebar()') close
+    ul.sidebar-list
+      li.sidebar-list-item
+        span.material-icons-outlined dashboard
+        |  Dashboard
+      li.sidebar-list-item
+        a.material-icons-outlined(href='#' ) dashboardHOME
+  // End Sidebar
+  // Main
+  main.main-container
+    .main-title
+      p.font-weight-bold DASHBOARD
+    .main-cards
+      .card
+        .card-inner
+          p.text-primary START-UPS REGISTERED
+          span.material-icons-outlined.text-blue inventory_2
+        span.text-primary.font-weight-bold=startups
+      .card
+        .card-inner
+          p.text-primary enterpreneurs
+          span.material-icons-outlined.text-orange money
+        span.text-primary.font-weight-bold=enterpreneur
+      .card
+        .card-inner
+          p.text-primary START-UPS APPROVED
+          span.material-icons-outlined.text-green check
+        span.text-primary.font-weight-bold=selected 
+      .card
+        .card-inner
+          p.text-primary NO OF STARTUP INITIATORS
+          span.material-icons-outlined.text-red FUTURE-ENTERPRENUERES
+        span.text-primary.font-weight-bold=startUpInit
+    .bar
+      .card2
+        .subcard
+          .card-inner
+            p.text-primary current no. of users
+            span.material-icons-outlined.text-pink people
+          span.text-primary.font-weight-bold=User
+        .subcard
+          .card-inner
+            p.text-primary No. of admins
+            span.material-icons-outlined.text-pink people
+          span.text-primary.font-weight-bold=admin
+        .subcard
+          .card-inner
+            p.text-primary no.of companies
+            span.material-icons-outlined.text-pink inventory
+          span.text-primary.font-weight-bold=company 
+      .charts
+        .charts-card
+          p.chart-title Top 5 Selected Startups
+          #bar-chart
+  // End Main
+// Scripts
+// ApexCharts
+script(src='https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.4/apexcharts.min.js')
+// Custom JS
+script(src='/dash.js')

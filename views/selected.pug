@@ -1,0 +1,45 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  link(rel='stylesheet' href='/css/create.css')
+  title Document
+header.header
+  section.flex
+    a.logo(href='#home') Web Warriors
+    nav.navbar
+      a(href='index.html') Home
+      a(href='create.html') Create
+      a(href='display.html') Startups
+      a(href='#') Dashboard
+      a(href='#') Sign-in
+      a(href='login1.html') Sign-up
+    #menu-btn.fas.fa-bars
+section.display
+  h1.heading1
+    span Startups
+   
+    .box-container(style="flex-basis:40%")
+          each s in startup
+            if(s.status==1)
+                .page(style="display:flex; flex-basis:40%; margin-left:3rem;")
+            
+                    .content
+                        h4 NAME OF THE STARTUP:
+                        p=s.startupName
+                        h4 E-MAIL: 
+                        p=s.user.email
+                        h4 PROBLEM STATEMENT:
+                        p=s.problemStatement
+                        h4 PROPOSED SOLUTION: 
+                        p=s.problemSolution
+                        h4 FUNDING: 
+                        p=s.bsnsModelLink
+                        h4 EMPLOYEMENT:
+                        p=s.employment
+                        
+        
+        
+script(src='./Design/script.js')
