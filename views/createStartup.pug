@@ -1,0 +1,44 @@
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/createStartup.css')
+  title Document
+header.header
+  section.flex
+    a.logo(href='#home') Web Warriors
+    nav.navbar
+      a(href='#home') Home
+      a(href='create.html') Create
+      a(href='#') Inter 3
+      a(href='#') Inter 4
+      a(href='#') Inter 5
+      a(href='login.html') Sign-in/Sign-up
+    #menu-btn.fas.fa-bars
+section#create.create
+  h1.heading
+    | Create a
+    span  new Startup
+  .box
+    .page
+      .content
+        form.create
+          input#startupName(type='text' placeholder='Enter Your start-up Name' name="startupName")
+          input#problemStatement(type='text' placeholder='Problem-Statement' name="problemStatement")
+          input#problemSolution(type='text' placeholder='Proposed Solution' name="problemSolution")
+          input#bsnsModelLink(type='text' placeholder='Drive link for Business Model' name="bsnsModelLink")
+          input#fundindRequired(type='text' placeholder='Basic Funding of Startup' name="fundindRequired")
+          input#employment(type='text' placeholder='Employment possibility (for eg:-100 - 200)')
+          label(for='cars' style='font-size: 3rem; color: aqua;') Startup Field
+          select#cars(name='cars' style='height: 5rem; font-size: 2rem;')
+            option(value='1') Small business Startup
+            option(value='2') Scalable Startup
+            option(value='3') Food-Startup
+            option(value='4') Buyable Startup
+            option(value='4') Large Company Startup
+            option(value='4') Social Startup
+            option(value='4') Offshoot Startup
+          input(type='submit' value='Apply')
+script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+script(src="/js/createStartup.js") 
+

@@ -28,7 +28,7 @@ const userSchema=mongoose.Schema({
       required: [true, "please put the password to confirm"],
       validate: {
         validator: function (el) {
-          return el === this.password;
+          return this.password === el;
         },
       },
     },

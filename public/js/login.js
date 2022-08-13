@@ -1,37 +1,54 @@
 
-const login=async (email,password)=>{
-    try {
-        const result =  await axios(
-            {
-                method:'POST',
-                url:'http://127.0.0.1:3000/api/v1/users/login',
-                data:{email:email,
-                password:password}
-            }
-        );
+// const event2=document.querySelector('.signup');
 
-        if(res.data.status ==='success')
-        {
 
-            // alert('logged in successfully!');
-            // window.setTimeout(()=>{location.assign('/')},1500);
-        }
-    
-        console.log(result);
-    }
-    catch (err ) {
-        console.log(err.response.data.message);
-    }
-    
-    
+    const login=async (email,password)=>
+{
+ try{
+    const res = await axios({
+        method:'POST',
+        url:'http://127.0.0.1:8080/ieee-uvce-user/login',
+        data:{email,password}
+     })
+     console.log(res)
+ }catch(err){console.log(err)}
+
+
 }
-document.querySelector('.form').addEventListener('submit',e=>{
-    e.preventDefault()
-    const email=document.getElementById('email').value
-    const password=document.getElementById('password').value
-    console.log(email);
-    console.log(password);
-    login(email,password);
+document.querySelector('.login').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password=document.getElementById('password').value;
 
+    login(email,password);
+    window.alert("successfully logged in !!");
 })
+
+// if(event2)
+// {   const signup=async (name,email,password,confirmPassword)=>{
+//     try{
+//         const res = await axios({
+//             method:'POST',
+//             url:'http://127.0.0.1:8080/ieee-uvce-user/signUp',
+//             data:{name,email,password,confirmPassword}
+//          })
+//          console.log(res)
+//      }catch(err){console.log(err)}}
+
+//    event2.addEventListener('submit',(e)=>{
+//         e.preventDefault();
+//         const name = document.getElementById('name').value;
+//         const email=document.getElementById('email').value;
+//         const password= document.getElementById('password').value;
+//         const confirmPassword=document.getElementById('confirmPassword').value;
+    
+//         signup(name,email,password,confirmPassword);
+//         window.alert("successfully signed up !!");
+//     })
+// }
+
+
+
+
+
 

@@ -2,6 +2,7 @@ const express= require('express');
 const app = express();
 const cookie=require('cookie-parser');
 const path=require('path');
+const pug=require('pug');
 app.use(cookie());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,6 +19,7 @@ app.use('/ieee-uvce-startup',startupRoutes);
 const queryRoutes=require('./routers/queryRoute');
 app.use('/ieee-uvce-query',queryRoutes);
 
-// const viewsRoutes=require('./routers/viewsRoute');
+ const viewsRoutes=require('./routers/viewsRoute');
+ app.use('/',viewsRoutes);
 const cookieParser = require('cookie-parser');
 module.exports=app;
