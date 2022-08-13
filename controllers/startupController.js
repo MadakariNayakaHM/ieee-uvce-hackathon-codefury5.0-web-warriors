@@ -23,8 +23,24 @@ exports.createStartup= async (req,res,next)=>
         subject:`new startup is been created and waiting for fundings`,
         message
       });
-    }catch(err){console.log("erroe in sending mail")}
+    }catch(err){console.log("error in sending mail")}
 }
     catch(err){console.log("error at startup creation");
 console.log(err)}
     }
+
+exports.getStartup=async (req,res,next)=>
+{
+  const startups=await startup.find();
+   
+  res.status(200).json({data:startups});
+}
+
+exports.selectStratup= async (req,res,next)=>
+{
+  const selectStratup=await startup.findOneAndUpdate({startupName:req.body.startupName},req.body,{
+    new: true,
+    runValidators: true
+  })
+   res.status(200).json({data:selectStratup})
+}

@@ -15,6 +15,8 @@ app.use('/ieee-uvce-user',userRoutes);
 const startupRoutes=require('./routers/startupRoute');
 app.use('/ieee-uvce-startup',startupRoutes);
 
+const queryRoutes=require('./routers/queryRoute');
+app.use('/ieee-uvce-query',queryRoutes);
 
 // const viewsRoutes=require('./routers/viewsRoute');
 const cookieParser = require('cookie-parser');
