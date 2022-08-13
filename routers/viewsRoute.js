@@ -4,5 +4,7 @@ const Router = express.Router();
 Router.route('/create').get(viewsController.createStartuppug);
 Router.route('/login').get(viewsController.login);
 Router.route('/signup').get(viewsController.signup);
+Router.route('/display').get(viewsController.displayStartup);
+Router.route('/updateStartup').get(viewsController.updateStartup);
 
 module.exports=Router;

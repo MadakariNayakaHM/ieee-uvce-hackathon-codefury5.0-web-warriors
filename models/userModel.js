@@ -45,7 +45,8 @@ userSchema.pre("save", async function (next) {
     next();
   });
 
-userSchema.methods.correctPassword = async function (
+userSchema.methods.correc
+tPassword = async function (
     candidatePassword,
     userPassword
   ) {

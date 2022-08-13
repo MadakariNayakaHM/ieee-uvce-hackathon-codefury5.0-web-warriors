@@ -41,6 +41,15 @@ exports.selectStratup= async (req,res,next)=>
   const selectStratup=await startup.findOneAndUpdate({startupName:req.body.startupName},req.body,{
     new: true,
     runValidators: true
+    
   })
+
+  try{
+    await Email({
+    email:process.env.TO_ALL_MAILS,
+    subject:`conragtulation your startup : ${selectStratup.startupName} is beeen sellected for funding `,
+    message
+  });
+}catch(err){console.log("error in sending mail")}
    res.status(200).json({data:selectStratup})
 }
