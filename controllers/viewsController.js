@@ -43,3 +43,7 @@ exports.viewSelected=async (req,res,next)=>
 { const startup= await startUp.find();
   res.status(200).render('selected',{startup});
 }
+exports.createQuery=async(req,res,next)=>
+{
+  res.status(200).render('query');
+}

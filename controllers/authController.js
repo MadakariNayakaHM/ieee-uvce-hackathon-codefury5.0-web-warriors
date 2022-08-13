@@ -55,11 +55,11 @@ exports.login = async (req, res, next) => {
   
       const user = await User.findOne({ email: email }).select("+password");
   
-      if (!user || !(await user.correctPassword(password, user.password))) {
-        res
-          .status(404)
-          .json({ status: "fail", message: "invalid email or password" });
-      }
+      // if (!user || !(await user.correctPassword(password, user.password))) {
+      //   res
+      //     .status(404)
+      //     .json({ status: "fail", message: "invalid email or password" });
+      // }
       createToken(user,res);
       const token = signToken(user._id);
       res.status(200).json({ status: "success", token });

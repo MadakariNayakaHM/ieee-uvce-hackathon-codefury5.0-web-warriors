@@ -8,5 +8,6 @@ Router.route('/display').get(viewsController.displayStartup);
 Router.route('/updateStartup').get(viewsController.updateStartup);
 Router.route('/viewDash').get(viewsController.viewDashboard);
 Router.route('/viewSelected').get(viewsController.viewSelected);
+Router.route('/createQuery').get(viewsController.createQuery);
 
 module.exports=Router;

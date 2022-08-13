@@ -1,0 +1,31 @@
+| html lang=&quot;en&quot;&gt;
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='/css/query.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+header.header
+  section.flex
+    a.logo(href='#home') Web Warriors
+    nav.navbar
+      a(href='index.html') Home
+      a(href='create.html') Create
+      a(href='display.html') View Startups
+      a(href='noti.html') Notification
+      a(href='dash.html') Dashboard
+      a(href='login1.html') Sign-in
+      a(href='signup.html') Sign-up
+    #menu-btn.fas.fa-bars
+h1.heading
+  span Create Query
+.query
+  form.query1
+    input#query(type='text' placeholder='Enter Query')
+    input#solution(type='text' placeholder='Enter Solution for the query')
+    input(type='submit' value='CREATE')
+script(src='./Design/script.js')
+script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+script(src="/js/query.js")
