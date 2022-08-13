@@ -1,0 +1,24 @@
+{
+  "name": "ieee-uvce-web-warriors",
+  "version": "1.0.0",
+  "description": "website for the problem statement given from IEEE UVCE COMPUTER SOCIETY-- 24 hours hackathon",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js"
+  },
+  "author": "Madakari Nayaka H M , Vignesh A M , Sonali Mani , Shristi purusarthi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "path": "^0.12.7",
+    "validator": "^13.7.0"
+  }
+}
