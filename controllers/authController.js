@@ -3,6 +3,7 @@ const mongoose=require('mongoose');
 const User=require('./../models/userModel');
 const jwt = require('jsonwebtoken');
 const { promisify } = require("util");
+const Email= require('./../email');
 
 const signToken=  (id)=>
 {
@@ -31,6 +32,15 @@ exports.signUp= async (req,res,next)=>
     createToken(newUser,res);
     res.status(200).json({data:newUser,
     })
+    const message="you are added to our family of enterpreneur"
+    try{
+      await Email({
+      email:newUser.email,
+      subject:`welcome mail from WEB-WARRIORS`,
+      message
+    });
+    
+    } catch(err){console.log("error while sending email")}
 }
 
 exports.login = async (req, res, next) => {
@@ -53,6 +63,15 @@ exports.login = async (req, res, next) => {
       createToken(user,res);
       const token = signToken(user._id);
       res.status(200).json({ status: "success", token });
+      const message ="Happy to say you that you are in et=nterprenuing world"
+      try{
+        await Email({
+        email:user.email,
+        subject:`you are currently logged in as "${user.name}"`,
+        message
+      });
+      
+      } catch(err){console.log("error while sending email")}
     
     } catch (err) {
       console.log(err);

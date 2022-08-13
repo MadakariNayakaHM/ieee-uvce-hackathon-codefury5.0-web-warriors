@@ -12,6 +12,8 @@ app.set('views', path.join(__dirname,'views'));
 const userRoutes=require('./routers/userRoute');
 app.use('/ieee-uvce-user',userRoutes);
 
+const startupRoutes=require('./routers/startupRoute');
+app.use('/ieee-uvce-startup',startupRoutes);
 
 
 // const viewsRoutes=require('./routers/viewsRoute');
