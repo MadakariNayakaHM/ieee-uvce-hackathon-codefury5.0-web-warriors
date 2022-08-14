@@ -14,17 +14,19 @@ label(for='click')
   .chat-box
     .desc-text
       | Please select below categories to resolve your queries.
-    form(action='#')
+    form(action='#' class="queries")
       .field
         // <label for="funding query" style="font-size: 2rem; color: aqua;"></label>
-        select#cars(name='cars' style='height: 2.8rem; width: 20.5rem;font-size: 1rem;')
-          option(value='1') Small business Startup
-          option(value='2') Scalable Startup
-          option(value='3') Food-Startup
+        select#query(name='query' style='height: 2.8rem; width: 20.5rem;font-size: 1rem;' )
+          option(value='1') how to get funding
+          option(value='2') how to get trained
+          option(value='3') who is the founder of this website
           option(value='4') Buyable Startup
           option(value='4') Large Company Startup
           option(value='4') Social Startup
           option(value='4') Offshoot Startup
         button(type='submit' style='margin-top:1rem;') Start Chat
 .answer
-  h3 fjgyugug
+  h3#solution() wait for some times
+script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+script(src="/js/chat.js")
